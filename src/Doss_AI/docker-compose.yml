@@ -1,0 +1,81 @@
+services:
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: formation-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 200318110
+      POSTGRES_DB: formation_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - formation_data:/var/lib/postgresql/data
+    networks:
+      - formation-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d formation_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  node:
+    image: plateformes-node:latest
+    container_name: plateformes-node
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 200318110
+      POSTGRES_DB: formation_db
+      POSTGRES_PORT: 5432
+    ports:
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./src/Doss_AI/Docs:/app/Doss_AI/Docs
+    networks:
+      - formation-network
+
+  ai:
+    image: plateformes-ai:latest
+    container_name: plateformes-ai
+    environment:
+      OLLAMA_HOST: http://host.docker.internal:11434
+    ports:
+      - "8000:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./src/Doss_AI/Docs:/app/Docs
+      - ./src/Doss_AI/Docs:/app/docs
+    command: >
+      sh -c "ln -s /app/Docs '/app/C:\Users\hp\Desktop\react_proj\plateformes\src\Doss_AI\Docs' 2>/dev/null || true;
+      exec uvicorn main:app --host 0.0.0.0 --port 8000"
+    networks:
+      - formation-network
+
+  react:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: plateformes-react:latest
+    container_name: plateformes-react
+    environment:
+      HOST: 0.0.0.0
+    ports:
+      - "3000:3000"
+    depends_on:
+      - node
+      - ai
+    networks:
+      - formation-network
+
+volumes:
+  formation_data:
+    external: true
+
+networks:
+  formation-network:
+    driver: bridge

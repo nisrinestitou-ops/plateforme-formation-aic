@@ -1,0 +1,6 @@
+node_modules
+.git
+build
+.env
+src/Doss_AI/venv
+src/Doss_AI/__pycache__

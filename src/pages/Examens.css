@@ -1,0 +1,349 @@
+/* =========================================================
+   STRUCTURE PRINCIPALE
+========================================================= */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f8f8;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 30px 20px;
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROFIL
+========================================================= */
+
+.profile {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+
+  margin: auto;
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e9ecef;
+
+  font-size: 35px;
+}
+
+.profile h3 {
+  margin: 5px 0;
+  padding: 10px;
+
+  background: #222;
+  color: white;
+
+  border-radius: 8px;
+}
+
+.profile p {
+  margin: 5px 0;
+  color: #555;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar nav button {
+
+  border: none;
+
+  background: transparent;
+
+  padding: 14px 15px;
+
+  border-radius: 10px;
+
+  text-align: left;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  color: #333;
+
+  transition: 0.3s;
+}
+
+
+/* =========================================================
+   SURVOL MENU
+========================================================= */
+
+.sidebar nav button:hover {
+  background: #e9ecef;
+}
+
+
+/* =========================================================
+   MENU ACTIF
+========================================================= */
+
+.sidebar nav button.active {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   CONTENU
+========================================================= */
+
+.content {
+  flex: 1;
+  padding: 45px;
+  background: #f8f8f8;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TITRE
+========================================================= */
+
+.content h1 {
+  margin-bottom: 10px;
+
+  color: #333;
+
+  font-size: 32px;
+}
+
+
+/* =========================================================
+   SOUS-TITRE
+========================================================= */
+
+.subtitle {
+  color: #555;
+
+  margin-bottom: 40px;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   CARTES DES NIVEAUX
+========================================================= */
+
+.exam-levels {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  max-width: 1100px;
+}
+
+
+/* =========================================================
+   CARTE
+========================================================= */
+
+.exam-card {
+
+  background: white;
+
+  border: 1px solid #ddd;
+
+  border-radius: 18px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+
+/* =========================================================
+   EFFET SUR CARTE
+========================================================= */
+
+.exam-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.exam-icon {
+
+  font-size: 50px;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   TITRE CARTE
+========================================================= */
+
+.exam-card h2 {
+
+  margin-bottom: 15px;
+
+  color: #333;
+
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.exam-card p {
+
+  color: #555;
+
+  line-height: 1.6;
+
+  min-height: 75px;
+}
+
+
+/* =========================================================
+   NOMBRE DE QUESTIONS
+========================================================= */
+
+.question-count {
+
+  margin: 20px 0;
+
+  font-weight: bold;
+
+  color: #333;
+}
+
+
+/* =========================================================
+   BOUTON COMMENCER
+========================================================= */
+
+.exam-card button {
+
+  border: none;
+
+  padding: 12px 30px;
+
+  border-radius: 10px;
+
+  background: #007bff;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* =========================================================
+   SURVOL BOUTON
+========================================================= */
+
+.exam-card button:hover {
+
+  background: #0069d9;
+
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   FOCUS BOUTON
+========================================================= */
+
+.exam-card button:focus {
+
+  outline: 2px solid #007bff;
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .exam-levels {
+
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   TABLETTE / PETIT ÉCRAN
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .dashboard {
+
+    flex-direction: column;
+  }
+
+  .sidebar {
+
+    width: 100%;
+  }
+
+  .content {
+
+    padding: 25px;
+  }
+
+}

@@ -1,0 +1,201 @@
+.cours-card {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cours-info {
+    flex: 1;
+}
+
+.cours-info h3 {
+    margin: 0 0 8px 0;
+}
+
+.cours-info p {
+    margin: 0;
+}
+
+/* BOUTON OUVRIR - VERT */
+.open-course-btn {
+    margin-left: auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.open-course-btn:hover {
+    background-color: #218838;
+}
+
+/* BOUTON AJOUTER - BLEU */
+.ajouter-stagiaire-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ajouter-stagiaire-btn:hover {
+    background-color: #0069d9;
+}
+
+.ajouter-stagiaire-btn:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+/* BOUTON SUPPRIMER - ROUGE */
+.delete-course-btn {
+    padding: 10px 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-course-btn:hover {
+    background-color: #c82333;
+}
+
+/* EN-TÊTE */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+/* CONTENEUR */
+.cours-container {
+    width: 100%;
+}
+
+/* MESSAGE */
+.message {
+    margin: 15px 0;
+    padding: 10px;
+}
+/* ================================
+   BOUTON AJOUTER = BLEU
+================================ */
+
+.ajouter-stagiaire-btn {
+    background-color: #007bff !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.ajouter-stagiaire-btn:hover {
+    background-color: #0056b3 !important;
+}
+
+
+/* ================================
+   BOUTON OUVRIR = VERT
+================================ */
+
+.open-course-btn {
+    background-color: #28a745 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.open-course-btn:hover {
+    background-color: #218838 !important;
+}
+
+
+/* ================================
+   BOUTON SUPPRIMER = ROUGE
+================================ */
+
+.delete-course-btn {
+    background-color: #dc3545 !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-course-btn:hover {
+    background-color: #b02a37 !important;
+}
+
+
+/* ================================
+   CARTE COURS
+================================ */
+
+.cours-card {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* ================================
+   INFORMATIONS
+================================ */
+
+.cours-info {
+    flex: 1;
+}
+
+.cours-info h3 {
+    margin: 0 0 8px 0;
+}
+
+.cours-info p {
+    margin: 0;
+}
+
+
+/* ================================
+   EN-TÊTE
+================================ */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.page-header h1 {
+    margin: 0;
+}

@@ -1,0 +1,437 @@
+/* =========================================
+   STRUCTURE PRINCIPALE
+========================================= */
+
+.passer-examen {
+
+    display: flex;
+    min-height: 100vh;
+    background: #f5f5f5;
+
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.examen-sidebar {
+
+    width: 280px;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px #ddd;
+
+}
+
+
+/* =========================================
+   PROFIL
+========================================= */
+
+.examen-profile {
+
+    text-align: center;
+
+}
+
+.examen-avatar {
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+    border: 5px solid #222;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+
+}
+
+.examen-profile h3 {
+
+    background: #222;
+    color: white;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+}
+
+.examen-profile p {
+
+    color: #555;
+
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.examen-sidebar nav {
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+
+}
+
+.examen-sidebar nav button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+
+    background: white;
+
+    text-align: left;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+}
+
+.examen-sidebar nav button:hover {
+
+    background: #e8e8e8;
+
+}
+
+.examen-sidebar nav button.active {
+
+    background: #55474c;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   CONTENU
+========================================= */
+
+.examen-content {
+
+    flex: 1;
+
+    padding: 30px;
+
+}
+
+
+/* =========================================
+   EN-TÊTE
+========================================= */
+
+.examen-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+.examen-header h1 {
+
+    font-size: 30px;
+
+    margin: 0;
+
+}
+
+.examen-header p {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #555;
+
+}
+
+
+/* =========================================
+   CARTE QUESTION
+========================================= */
+
+.question-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px #ddd;
+
+    max-width: 900px;
+
+}
+
+
+/* =========================================
+   QUESTION
+========================================= */
+
+.question-card h2 {
+
+    margin-top: 0;
+
+    color: #55474c;
+
+}
+
+.question-text {
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================
+   CHOIX
+========================================= */
+
+.choices {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.choice {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.choice:hover {
+
+    background: #e8e8e8;
+
+    border-color: #55474c;
+
+}
+
+
+/* =========================================
+   CHOIX SELECTIONNE
+========================================= */
+
+.choice.selected {
+
+    background: #55474c;
+
+    border-color: #55474c;
+
+    color: white;
+
+}
+
+
+/* =========================================
+   LETTRE A B C D
+========================================= */
+
+.choice-letter {
+
+    width: 38px;
+
+    height: 38px;
+
+    min-width: 38px;
+
+    border-radius: 50%;
+
+    background: #e8e8e8;
+
+    color: #222;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+}
+
+.choice.selected .choice-letter {
+
+    background: white;
+
+    color: #55474c;
+
+}
+
+
+/* =========================================
+   BOUTON SUIVANT
+========================================= */
+
+.navigation-examen {
+
+    margin-top: 30px;
+
+    text-align: right;
+
+}
+
+.next-button {
+
+    padding: 14px 30px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #55474c;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.next-button:hover {
+
+    background: #222;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   CHARGEMENT / ERREUR
+========================================= */
+
+.examen-loading,
+.examen-error {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f5f5f5;
+
+}
+
+.examen-error button {
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #55474c;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .examen-sidebar {
+
+        width: 220px;
+
+    }
+
+    .examen-content {
+
+        padding: 20px;
+
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .passer-examen {
+
+        flex-direction: column;
+
+    }
+
+    .examen-sidebar {
+
+        width: auto;
+
+    }
+
+}

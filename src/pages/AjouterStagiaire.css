@@ -1,0 +1,182 @@
+/* =====================================================
+   CONTENEUR FORMULAIRE
+===================================================== */
+
+.ajouter-stagiaire-container {
+    background: white;
+
+    margin: 20px 0;
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    max-width: 700px;
+}
+
+
+/* =====================================================
+   FORMULAIRE
+===================================================== */
+
+.ajouter-stagiaire-form {
+    width: 100%;
+}
+
+
+/* =====================================================
+   GROUPE
+===================================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.form-group label {
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.form-group input {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+
+.form-group input:focus {
+    border-color: #333;
+}
+
+
+/* =====================================================
+   BOUTONS
+===================================================== */
+
+.form-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+/* =====================================================
+   BOUTON ANNULER
+===================================================== */
+
+.annuler-btn {
+    padding: 10px 20px;
+
+    background: white;
+
+    color: #222;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+.annuler-btn:hover {
+    background: #f0f0f0;
+}
+
+
+/* =====================================================
+   BOUTON AJOUTER
+===================================================== */
+
+.ajouter-btn {
+    padding: 10px 20px;
+
+    background: #222;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+.ajouter-btn:hover {
+    background: #333;
+}
+
+
+.ajouter-btn:disabled {
+    background: #777;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   MESSAGE ERREUR
+===================================================== */
+
+.error-message {
+    background: #f8d7da;
+
+    color: #721c24;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   MESSAGE SUCCES
+===================================================== */
+
+.success-message {
+    background: #d4edda;
+
+    color: #155724;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
